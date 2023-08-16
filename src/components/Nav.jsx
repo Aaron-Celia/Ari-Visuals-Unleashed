@@ -71,7 +71,7 @@ export default function Nav() {
 							"&:hover": { backgroundColor: "inherit" },
 							marginRight: "1.25rem"
 						}}>
-                            Gallery
+						Gallery
 					</Button>
 					<Menu
 						id="basic-menu"
@@ -115,6 +115,11 @@ export default function Nav() {
 					</Menu>
 					<Link
 						className="h-full w-20 flex justify-center items-center text-lg mx-5"
+						href="/">
+						Home
+					</Link>
+					<Link
+						className="h-full w-20 flex justify-center items-center text-lg mx-5"
 						href="/about">
 						About
 					</Link>
@@ -151,7 +156,7 @@ export default function Nav() {
 						onClick={() => {
 							closeModal();
 						}}
-						className="bg-black h-screen w-screen flex flex-col items-center justify-around text-white">
+						className="bg-black h-screen w-screen flex flex-col items-center justify-around text-white py-20">
 						<Button
 							id="basic-button"
 							aria-controls={open ? "basic-menu" : undefined}
@@ -226,6 +231,9 @@ export default function Nav() {
 								</Link>
 							</MenuItem>
 						</Menu>
+						<Link className={`${quicksand.className} text-3xl`} href="/">
+							Home
+						</Link>
 						<Link className={`${quicksand.className} text-3xl`} href="/about">
 							About
 						</Link>

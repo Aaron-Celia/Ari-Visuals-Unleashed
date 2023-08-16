@@ -3,6 +3,7 @@ import Location from '@/components/Location';
 import fav4 from '@/images/Architecture/fav4.jpeg';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import fav1 from '@/images/Architecture/fav1.jpeg';
 
 export default function Home() {
   const router = useRouter();
@@ -10,7 +11,7 @@ export default function Home() {
 		<main className="">
 			<div className="w-screen">
 				<Image
-					src={fav4}
+					src={fav1}
 					alt="Showcase Image"
 					id="laptop-bg"
 					className="w-screen aspect-auto -z-10"
@@ -26,7 +27,7 @@ export default function Home() {
 					alt="Showcase Image"
 					className="h-[12rem] w-[18rem] relative top-[28rem] right-[1rem] z-0"
 				/> */}
-				<div className="absolute top-[27vw] w-screen flex flex-col justify-center items-center self-center z-10 text-black">
+				<div className="absolute top-[27vw] w-screen flex flex-col justify-center items-center self-center z-10 text-white">
 					<h3 className="text-3xl tablet:text-4xl laptop:text-5xl">
 						Freezing Time,
 					</h3>
