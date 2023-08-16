@@ -2,26 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+}
+
+#nav {
+	background: #000000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#434343,
+		#000000
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#434343,
+		#000000
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	height: 5rem;
+}
+
+#phone-nav {
+	background: #000000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to right,
+		#434343,
+		#000000
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#434343,
+		#000000
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	height: 5rem;
+}
+
+.flex-3 {
+	flex: 3;
+}
+
+.flex-5 {
+	flex: 5;
+}
+
+.height-page {
+	height: calc(100vh - 5rem);
+}
+
+#architecture {
+	background-image: url("../images/Architecture/bg.jpeg");
+	background-size: cover;
+}
+
+#concerts {
+	background-image: url("../images/Concerts/bg2.jpeg");
+	background-size: cover;
+}
+
+#portraits {
+	background-image: url("../images/Portraits/bg3.jpeg");
+	background-size: cover;
+}
+
+#scenic {
+	background-image: url("../images/Scenic/bg4.jpeg");
+	background-size: cover;
+}
+
+#other {
+	background-image: url("../images/Misc/bg5.jpeg");
+	background-size: cover;
 }
