@@ -57,6 +57,11 @@ export default function Nav() {
 					<Image src={logo} alt="Logo" className="h-[90%] w-40 mt-1 ml-4" />
 				</div>
 				<div className="flex w-[50vw] justify-around items-center mr-0">
+					<Link
+						className="h-full w-20 flex justify-center items-center text-lg mx-5"
+						href="/">
+						Home
+					</Link>
 					<Button
 						id="basic-button"
 						aria-controls={open ? "basic-menu" : undefined}
@@ -65,13 +70,13 @@ export default function Nav() {
 						onClick={handleClick}
 						disableFocusRipple
 						disableRipple
-						className={`${quicksand.className} text-lg`}
-						endIcon={open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+						className={`${quicksand.className} m-0`}
+						endIcon={open ? <KeyboardArrowUpIcon sx={{ margin: '0' }} /> : <KeyboardArrowDownIcon />}
 						sx={{
 							"&:hover": { backgroundColor: "inherit" },
 							marginRight: "1.25rem"
 						}}>
-						Gallery
+						<p className="text-[16px]">Gallery</p>
 					</Button>
 					<Menu
 						id="basic-menu"
@@ -83,41 +88,36 @@ export default function Nav() {
 						}}>
 						<MenuItem onClick={handleClose}>
 							<Link
-								className={`${quicksand.className} text-xl`}
+								className={`${quicksand.className} text-xl my-3`}
 								href="/architecture">
 								Architecture
 							</Link>
 						</MenuItem>
 						<MenuItem onClick={handleClose}>
 							<Link
-								className={`${quicksand.className} text-xl`}
+								className={`${quicksand.className} text-xl my-3`}
 								href="/concerts">
 								Concerts
 							</Link>
 						</MenuItem>
 						<MenuItem onClick={handleClose}>
 							<Link
-								className={`${quicksand.className} text-xl`}
+								className={`${quicksand.className} text-xl my-3`}
 								href="/portraits">
 								Portraits
 							</Link>
 						</MenuItem>
 						<MenuItem onClick={handleClose}>
-							<Link className={`${quicksand.className} text-xl`} href="/scenic">
+							<Link className={`${quicksand.className} text-xl my-3`} href="/scenic">
 								Scenic
 							</Link>
 						</MenuItem>
 						<MenuItem onClick={handleClose}>
-							<Link className={`${quicksand.className} text-xl`} href="/other">
+							<Link className={`${quicksand.className} text-xl my-3`} href="/other">
 								Other
 							</Link>
 						</MenuItem>
 					</Menu>
-					<Link
-						className="h-full w-20 flex justify-center items-center text-lg mx-5"
-						href="/">
-						Home
-					</Link>
 					<Link
 						className="h-full w-20 flex justify-center items-center text-lg mx-5"
 						href="/about">
@@ -146,7 +146,9 @@ export default function Nav() {
 					<div onClick={() => router.push("/")} className="h-20">
 						<Image src={logo} alt="Logo" className="h-[90%] w-40" />
 					</div>
-					<div onClick={openModalMenu} className="absolute w-16 h-16 z-50 left-0 top-2">
+					<div
+						onClick={openModalMenu}
+						className="absolute w-16 h-16 z-50 left-0 top-2">
 						<Image src={phoneMenuIcon} alt="Menu" className="h-full w-full" />
 					</div>
 				</nav>
@@ -157,6 +159,9 @@ export default function Nav() {
 							closeModal();
 						}}
 						className="bg-black h-screen w-screen flex flex-col items-center justify-around text-white py-20">
+						<Link className={`${quicksand.className} text-2xl`} href="/">
+							Home
+						</Link>
 						<Button
 							id="basic-button"
 							aria-controls={open ? "basic-menu" : undefined}
@@ -170,9 +175,10 @@ export default function Nav() {
 							}
 							sx={{
 								"&:hover": { backgroundColor: "inherit" },
-								marginLeft: "1rem"
+								margin: '0',
+								paddingLeft: '2rem'
 							}}>
-							<div className={`${quicksand.className} text-2xl`}>Gallery</div>
+							<div className={`${quicksand.className} text-[20px]`}>Gallery</div>
 						</Button>
 						<Menu
 							id="basic-menu"
@@ -188,7 +194,7 @@ export default function Nav() {
 									closeModal();
 								}}>
 								<Link
-									className={`${quicksand.className} text-3xl`}
+									className={`${quicksand.className} text-2xl my-3`}
 									href="/architecture">
 									Architecture
 								</Link>
@@ -199,51 +205,55 @@ export default function Nav() {
 									closeModal();
 								}}>
 								<Link
-									className={`${quicksand.className} text-3xl`}
+									className={`${quicksand.className} text-2xl my-3`}
 									href="/concerts">
 									Concerts
 								</Link>
 							</MenuItem>
-							<MenuItem onClick={(e) => {
-                                handleClose(e)
-                                closeModal()
-                            }}>
+							<MenuItem
+								onClick={(e) => {
+									handleClose(e);
+									closeModal();
+								}}>
 								<Link
-									className={`${quicksand.className} text-3xl`}
+									className={`${quicksand.className} text-2xl my-3`}
 									href="/portraits">
 									Portraits
 								</Link>
 							</MenuItem>
-							<MenuItem onClick={(e) => {
-                                handleClose(e)
-                                closeModal()
-                            }}>
-								<Link className={`${quicksand.className} text-3xl`} href="/scenic">
+							<MenuItem
+								onClick={(e) => {
+									handleClose(e);
+									closeModal();
+								}}>
+								<Link
+									className={`${quicksand.className} text-2xl my-3`}
+									href="/scenic">
 									Scenic
 								</Link>
 							</MenuItem>
-							<MenuItem onClick={(e) => {
-                                handleClose(e)
-                                closeModal()
-                            }}>
-								<Link className={`${quicksand.className} text-3xl`} href="/other">
+							<MenuItem
+								onClick={(e) => {
+									handleClose(e);
+									closeModal();
+								}}>
+								<Link
+									className={`${quicksand.className} text-2xl my-3`}
+									href="/other">
 									Other
 								</Link>
 							</MenuItem>
 						</Menu>
-						<Link className={`${quicksand.className} text-3xl`} href="/">
-							Home
-						</Link>
-						<Link className={`${quicksand.className} text-3xl`} href="/about">
+						<Link className={`${quicksand.className} text-2xl`} href="/about">
 							About
 						</Link>
-						<Link className={`${quicksand.className} text-3xl`} href="/contact">
+						<Link className={`${quicksand.className} text-2xl`} href="/contact">
 							Contact
 						</Link>
 						<Link
 							target="_blank"
 							href="https://instagram.com/ari.visuals.unleashed?igshid=MmIzYWVlNDQ5Yg=="
-							className={`${quicksand.className} text-3xl`}>
+							className={`${quicksand.className} text-2xl`}>
 							@ari.visuals.unleashed
 						</Link>
 					</div>
