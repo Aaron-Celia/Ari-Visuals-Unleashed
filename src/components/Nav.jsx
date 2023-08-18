@@ -16,6 +16,7 @@ import { useRouter } from "next/navigation";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import phoneMenuIcon from "@/images/Logo/white-icon-2.png";
+import closeButton from '@/images/Logo/close-icon.png';
 
 const quicksand = Quicksand({
 	subsets: ["latin"],
@@ -256,6 +257,8 @@ export default function Nav() {
 							className={`${quicksand.className} text-2xl`}>
 							@ari.visuals.unleashed
 						</Link>
+				{ openModal ? 
+				<div><Image src={closeButton} alt='Close Menu Button' className="absolute top-4 left-4 z-50"/><div className="bg-white absolute h-8 w-8 top-8 left-8 z-40"></div></div> : null}
 					</div>
 				</Modal>
 			</>
